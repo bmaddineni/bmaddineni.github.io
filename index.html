@@ -18,6 +18,7 @@
     .range([0, 400]);
   console.log(x(25));
   svg_scale.call(d3.axisBottom(x));
+
   svg.append("circle")
     .attr("cx", 2)
     .attr("cy", 2)
@@ -38,19 +39,19 @@
 
   svg_scale.append("circle")
     .attr("cx", x(10))
-    .attr("cy", 50)
+    .attr("cy", 100)
     .attr("r", 40)
     .style("fill", 'red')
 
   svg_scale.append("circle")
     .attr("cx", x(50))
-    .attr("cy", 50)
+    .attr("cy", 100)
     .attr("r", 40)
     .style("fill", 'green')
 
   svg_scale.append("circle")
     .attr("cx", x(100))
-    .attr("cy", 50)
+    .attr("cy", 100)
     .attr("r", 40)
     .style("fill", 'blue')
 </script>
