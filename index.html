@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<title>Home - Lines to code</title>
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
@@ -8,8 +9,12 @@
 <svg id="dataviz_area" height=200 width=450></svg>
 <script type="text/javascript">
 d3
-  .selectAll()
-  .style("color",'green')
+  .select("#dataviz_area")
+  .append("circle")
+  .attr("cx",2)
+  .attr("cy",2)
+  .attr("r",50)
+  .style("fill","red")
 </script>
 
 </html>
