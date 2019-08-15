@@ -14,43 +14,45 @@
   var svg = d3.select("#dataviz_area");
   var svg_scale = d3.select("#dataviz_area_scale");
   var x = d3.scaleLinear()
-            .domain([0,100])
-            .range([0,400]);
-console.log(x(25));
+    .domain([0, 100])
+    .range([0, 400]);
+  console.log(x(25));
+  svg_scale.call(d3.axisBottom(x));
   svg.append("circle")
     .attr("cx", 2)
     .attr("cy", 2)
     .attr("r", 50)
     .style("fill", "red")
 
-    svg.append("circle")
-      .attr("cx", 140)
-      .attr("cy", 140)
-      .attr("r", 50)
-      .style("fill", "orange")
+  svg.append("circle")
+    .attr("cx", 140)
+    .attr("cy", 140)
+    .attr("r", 50)
+    .style("fill", "orange")
 
-   svg.append("circle")
-        .attr("cx", 300)
-        .attr("cy", 300)
-        .attr("r", 50)
-        .style("fill", "blue")
+  svg.append("circle")
+    .attr("cx", 300)
+    .attr("cy", 300)
+    .attr("r", 50)
+    .style("fill", "blue")
 
-svg_scale.append("circle")
-        .attr("cx",x(10))
-        .attr("cy",50)
-        .attr("r",40)
-        .style("fill",'red')
-svg_scale.append("circle")
-        .attr("cx",x(50))
-        .attr("cy",50)
-        .attr("r",40)
-        .style("fill",'green')
-svg_scale.append("circle")
-        .attr("cx",x(100))
-        .attr("cy",50)
-        .attr("r",40)
-        .style("fill",'blue')
-svg_scale.call(d3.axisBottom(x));
+  svg_scale.append("circle")
+    .attr("cx", x(10))
+    .attr("cy", 50)
+    .attr("r", 40)
+    .style("fill", 'red')
+
+  svg_scale.append("circle")
+    .attr("cx", x(50))
+    .attr("cy", 50)
+    .attr("r", 40)
+    .style("fill", 'green')
+
+  svg_scale.append("circle")
+    .attr("cx", x(100))
+    .attr("cy", 50)
+    .attr("r", 40)
+    .style("fill", 'blue')
 </script>
 
 </html>
