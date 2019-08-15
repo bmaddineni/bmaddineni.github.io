@@ -7,9 +7,11 @@
   <p>I'm hosted with GitHub Pages.</p>
 </body>
 <script src="https://d3js.org/d3.v4.js"></script>
-<svg id="dataviz_area" height=200 width=450></svg>
+<svg id="dataviz_area" height=400 width=750></svg>
+<svg id="dataviz_area_scale" height=400 width=750></svg>
 <script type="text/javascript">
   var svg = d3.select("#dataviz_area");
+  var svg_scale = d3.select("#dataviz_area_scale");
 
   svg.append("circle")
     .attr("cx", 2)
@@ -28,6 +30,23 @@
         .attr("cy", 300)
         .attr("r", 50)
         .style("fill", "blue")
+
+svg_scale.append("circle")
+        .attr("cx",100)
+        .attr("cy",50)
+        .attr("cx",40)
+        .style("fill",'red')
+svg_scale.append("circle")
+        .attr("cx",200)
+        .attr("cy",50)
+        .attr("cx",40)
+        .style("fill",'green')
+svg_scale.append("circle")
+        .attr("cx",300)
+        .attr("cy",50)
+        .attr("cx",40)
+        .style("fill",'blue')
+
 </script>
 
 </html>
