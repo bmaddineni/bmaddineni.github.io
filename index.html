@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html>
 <title>Home - Lines to code</title>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <h1>Hello World</h1>
+  <p>I'm hosted with GitHub Pages.</p>
 </body>
 <script src="https://d3js.org/d3.v4.js"></script>
 <svg id="dataviz_area" height=200 width=450></svg>
 <script type="text/javascript">
-d3
-  .select("#dataviz_area")
-  .append("circle")
-  .attr("cx",2)
-  .attr("cy",2)
-  .attr("r",50)
-  .style("fill","red")
+  var svg = d3.select("#dataviz_area");
+
+  svg.append("circle")
+    .attr("cx", 2)
+    .attr("cy", 2)
+    .attr("r", 50)
+    .style("fill", "red")
+
+    svg.append("circle")
+      .attr("cx", 140)
+      .attr("cy", 140)
+      .attr("r", 50)
+      .style("fill", "orange")
+
+   svg.append("circle")
+        .attr("cx", 300)
+        .attr("cy", 300)
+        .attr("r", 50)
+        .style("fill", "blue")
 </script>
 
 </html>
