@@ -14,7 +14,7 @@
   var svg = d3.select("#dataviz_area");
   var svg_scale = d3.select("#dataviz_area_scale");
   var x = d3.scaleLinear()
-            .domain([0,400]) 
+            .domain([0,100])
             .range([0,400]);
 console.log(x(25));
   svg.append("circle")
@@ -50,7 +50,7 @@ svg_scale.append("circle")
         .attr("cy",50)
         .attr("r",40)
         .style("fill",'blue')
-
+svg_scale.call(d3.axisBottom(x));
 </script>
 
 </html>
