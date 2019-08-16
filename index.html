@@ -5,12 +5,24 @@
 <body>
   <h1>Hello World</h1>
   <p>I'm hosted with GitHub Pages.</p>
+  <div class="div_margin_scale"></div>
 </body>
 <script src="https://d3js.org/d3.v4.js"></script>
 <svg id="dataviz_area" height=400 width=750></svg>
 <br>
 <svg id="dataviz_area_scale" height=400 width=750></svg>
 <script type="text/javascript">
+  var margin = {top: 10 right: 40, bottom 30, left:30},
+      width = 450 - margin.left - margin.right,
+      height = 400 - margin.top - margin.bottom;
+var svg_margin_scale = d3
+                        .select("#div_margin_scale")
+                        .append("svg")
+                        .attr("width",width + margin.left +margin.right)
+                        .attr("height",height + margin.top + margin.bottom)
+                        .append("g")
+                        .attr("transform", "translate("+margin.left +"," +margin.top +")");
+
   var svg = d3.select("#dataviz_area");
   var svg_scale = d3.select("#dataviz_area_scale");
   var x = d3.scaleLinear()
