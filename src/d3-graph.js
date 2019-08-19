@@ -1,5 +1,3 @@
-<script type="text/javascript">
-
   // set the dimensions and margins of the graph
   var margin = {top: 10, right: 40, bottom: 30, left: 30},
       width = 450 - margin.left - margin.right,
@@ -116,4 +114,3 @@ svg_margin_scale.append('g')
     .attr("cy", 100)
     .attr("r", 40)
     .style("fill", 'blue')
-</script>
