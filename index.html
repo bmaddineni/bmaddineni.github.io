@@ -8,6 +8,8 @@
   <button type="button" name="btn_Red" onclick="changeColor('Red')">Red</button>
   <button type="button" name="btn_Blue" onclick="changeColor('blue')">Blue</button>
   <button type="button" name="btn_Green" onclick="changeColor('green')">Green</button>
+<br>
+  <button type="button" name="btn_make_big" onclick="makeBigger(40)"></button>
   <div class="div_margin_scale"></div>
 </body>
 <div id="Area"></div>
@@ -32,6 +34,12 @@
     obj_Circle
       .style('fill', color)
   }
+
+  var makeBigger = function(size) {
+    obj_Circle.attr("r",size+5)
+  }
+
+
 </script>
 
 </html>
