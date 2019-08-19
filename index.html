@@ -2,6 +2,7 @@
 <html>
 <title>Home - Lines to code</title>
 <script src="https://d3js.org/d3.v4.js"></script>
+
 <body>
   <h1>Hello World</h1>
   <p>I'm hosted with GitHub Pages.</p>
@@ -9,7 +10,7 @@
   <button type="button" name="btn_Blue" onclick="changeColor('blue')">Blue</button>
   <button type="button" name="btn_Green" onclick="changeColor('green')">Green</button>
 
-  <button type="button" name="btn_make_big" onclick="makeBigger(20)"></button>
+  <button type="button" name="btn_make_big" onclick="makeBigger(20)">Zoom</button>
   <div class="div_margin_scale"></div>
 </body>
 <div id="Area"></div>
@@ -37,11 +38,9 @@
   }
 
   var makeBigger = function(size) {
-    size = size+5;
-    obj_Circle.attr("r",size)
+    size = size + 5;
+    obj_Circle.attr("r", size)
   }
-
-
 </script>
 
 </html>
