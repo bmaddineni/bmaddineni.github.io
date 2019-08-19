@@ -11,7 +11,27 @@
 <script src="https://d3js.org/d3.v4.js"></script>
 <svg id="dataviz_area" height=400 width=750></svg>
 <br>
-<svg id="dataviz_area_scale" height=400 width=750></svg>
 
-<script src="/src/d3-graph.js"></script>
+<button type="button" name="btn_Red" onclick="changeColor('Red')">Red</button>
+<button type="button" name="btn_Blue" onclick="changeColor('blue')">Blue</button>
+<button type="button" name="btn_Green" onclick="changeColor('green')">Green</button>
+
+<!-- <script src="/src/d3-graph.js"></script> -->
+
+<script type="text/javascript">
+
+var obj_Circle = d3.selectAll().append('div')
+              .append('svg')
+              .append('circle')
+              .attr("cx",50)
+              .attr("cy",40)
+              .attr("r",20)
+              .attr("stroke","black")
+
+var changeColor = function(color){
+  obj_Circle
+    .style('fill',color)
+}
+
+</script>
 </html>
